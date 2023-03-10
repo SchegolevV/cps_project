@@ -17,20 +17,25 @@
     font-style: normal;
     src: url(TTLakes/TTLakes-Bold.ttf);
 }
-@import url(media.css);
 * {margin: 0;}
 body {
     font-family: 'TT Lakes';
     font-weight: normal;
+    background-color: #F8F8F8;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
-.menu-wrapper {
+.header {
+    background-color: #ffffff;
+}
+.header-menu-wrapper {
     display: flex;
     height: 88px;
     justify-content: flex-end;
     align-items: center;
 }
-.menu-wrapper:first-child {
+.header-menu-wrapper:first-child {
     margin-left: 16px;
 }
 .button {
@@ -44,11 +49,11 @@ body {
 .button__image {
     width: 100%;
 }
-.menu-wrapper__logo {
+.header__logo {
     margin-right: auto;
     margin-bottom: 5px;
 }
-.menu-wrapper__button {
+.header__button {
     margin-right: 16px;
 }
 .divider-not-desctop {
@@ -61,15 +66,76 @@ body {
     width: 97px;
     height: 51px;
 }
+/* конец хэдера */
 .main-page {
-    background-color: #F8F8F8;
+    margin-top: 24px;
+}
+.main-page__title {
+    font-size: 28px;
+}
+.main-page__title::before {
+    content: '';
+    border: 3px solid #41F6D7;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-right: 12px;
 }
 
+.main-page__nav {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-top: 24px;
+    margin-left: 16px;
+    list-style: none;
+}
+.main-page__nav::-webkit-scrollbar {
+    display: none;
+}
+.nav__button {
+    width: auto;
+    height: auto;
+    flex: 0 0 auto;
+    padding: 8px 22px;
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    color: #7E7E82;
+}
+.nav__button:focus {
+    background-color: #ffffff;
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+}
+/* конец стилей навигации */
 
-
-
-
-
+.topic {
+    font-size: 14px;
+    line-height: 18px;
+    color: #1B1C21;
+}
+.main-page__topic {
+    margin: 24px 16px 16px;
+    max-height: 90px;
+    overflow: hidden;
+}
+.read-more {
+    margin-left: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1B1C21;
+    text-decoration: none;
+}
+.read-more::before {
+    content: url(icons/expand.svg);
+    margin-right: 8px;
+    vertical-align: top;
+}
+.decorative-image {
+    width: 110%;
+    height: 176px;
+    background: url(images/_MG_3223.png) no-repeat;
+    background-size: cover;
+}
 .button--not-mobile {
     display: none;
 }
@@ -78,4 +144,13 @@ body {
 }
 .button__repair-status--desctop {
     display: none;
+}
+   /* планшеты */
+@media (min-width: 768px) {
+    .button--not-mobile {
+        display: block;
+    }
+    .divider-not-desctop {
+        margin: 0 20px 0 4px;
+    }
 }
