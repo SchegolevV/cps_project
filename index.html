@@ -10,9 +10,10 @@
 <body>
     <header class="header">
         <div class="header-menu-wrapper">
-            <button class="button header__button menu-wrapper__burger-menu">
+            <button class="button header__button header__burger-menu">
                 <img src="icons/burger.svg" alt="открыть главное меню" class="button__image">
             </button>
+            <div class="divider-not-desctop divider-not-desctop--tablet-only"></div>
             <div class="logo header__logo">
                 <img src="icons/cps-logo.svg" alt="CPS логотип" class="logo__image">
             </div>
@@ -40,11 +41,13 @@
 
         <div class="title-wrapper">
             <h2 class="title main-page__title">Услуги и сервисы</h2>
-            <button class="button button__application button__application--desctop">
-                <img src="" alt="Оставить заявку" class="button__image">
+            <button class="button button__application button--desctop">
+                <span class="title-wrapper__button-text">Оставить заявку</span>
+                <img src="icons/repair.svg" alt="Оставить заявку" class="button__image">
             </button>
-            <button class="button button__repair-status button__repair-status--desctop">
-                <img src="" alt="Узнать статус ремонта" class="button__image">
+            <button class="button button__repair-status button--desctop">
+                <span class="title-wrapper__button-text">Статус ремонта</span>
+                <img src="icons/checkstatus.svg" alt="Узнать статус ремонта" class="button__image">
             </button>
         </div>
 
@@ -54,15 +57,20 @@
             <button class="button nav__button">Цены на услуги</button>
             <button class="button nav__button">Специальные цены</button>
             <button class="button nav__button">Адреса сервисных центров</button>
+            <button class="button nav__button">Отзывы</button>
         </nav>
 
-        <section class="main-page__nav-content">
-            <article class="topic main-page__topic">
-                <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-                <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
-            </article>
-            <a href="#" class="read-more">Читать далее</a>
-            <div class="decorative-image"></div>
+        <section class="nav-content main-page__nav-content">
+                <div class="nav-content__flex-item">
+                    <article class="topic main-page__topic">
+                        Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя<br><br>
+                        Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+                    </article>
+                    <a href="#" class="read-more">Читать далее</a>
+                </div>
+                <div class="decorative-image nav-content__flex-item">
+                    <img src="images/_MG_3223.png" alt="" width="100%">
+                </div>
         </section>
     </main>
 </body>
